@@ -1,0 +1,199 @@
+* {
+    padding: none !important;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none !important;
+}
+
+.wrapper .hero {
+    background-image: url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.divv {
+    margin-bottom: 100px !important;
+    position: sticky;top: 0 !important;
+    backdrop-filter: blur(45px);
+    z-index: 1000 !important;
+}
+nav li {
+    margin-left: 15px !important;
+}
+
+nav li a {
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 600 !important;
+    color: #363434 !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: .5s !important;
+    border-bottom: 2px solid #21212100 !important;
+    font-size: 17px !important;
+}
+
+nav li a:hover {
+    border-bottom: 2px solid #212121 !important;
+}
+
+/* nav section ended---------- */
+.left{
+    position: relative;
+}
+.left .text h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+    margin-top: 30px !important;
+    word-spacing: 5px;
+    position: relative;
+    z-index: 5;
+}
+.left #live-img{
+    position: absolute;
+    top: -15%;
+    right: 2%;
+    height: 570px;
+    zoom: 110%;
+}
+
+
+@media screen and (max-width:500px) {
+    .wrapper .hero{
+       margin-bottom: 70px;
+       height: 700px;
+    }
+    .left .text h1 br {
+        display: none;
+    }
+
+    .left .text h1 {
+        margin-bottom: 20px !important;
+        margin-top: 0px !important;
+        word-spacing: 0px;
+        backdrop-filter: blur(2px);
+    }
+
+    .wrapper .hero nav {
+        margin-bottom: 40px !important;
+    }
+    .left #live-img{
+        position: absolute;
+        top: 0%;
+        right: 2%;
+        height: 470px;
+    }
+}
+
+/* hero section ended----------------- */
+#carouselExampleIndicators{
+    max-width: 700px;
+    margin:  10px auto 100px;
+    height: 300px;
+}
+.carousel-inner {
+    border-radius: 10px !important;
+    height: 300px;
+    margin-bottom: 100px;
+}
+@media screen and (max-width:500px){
+    .carousel-inner {
+        border-radius: 10px !important;
+        height: fit-content;
+        margin-bottom: 100px;
+    }
+    .carousel1{
+    padding: 20px; 
+    margin-top: 0px !important;   
+    }
+}
+/* carousel section ended------- */
+.title_text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title_text p{
+    margin:auto ;
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+}
+.title_text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.title_text h1{
+    font-size: 50px;
+}
+#footer{
+    padding: 20px;
+    background: #efefef;
+}
+.footer_row{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer_left,.footer_right{
+    flex-basis:45% ;
+    padding: 10px;
+}
+.footer_right{
+    text-align: right;
+} 
+.footer_row h1{
+    margin: 20px 0;
+
+}
+.footer_row p{
+    line-height: 15px;
+}
+.social-links{
+    text-align: center;
+}
+.fa-brands{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border: 1px solid #009688;
+    margin: 0px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition: .5s;
+}
+.social-links .fa-brands:hover{
+    background-color: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+.social-links p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+@media screen and (max-width:770px) {
+    .footer_left,.footer_right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    
+}

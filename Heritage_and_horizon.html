@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heritage and Horizon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="heritage.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="divv">
+            <nav class="navbar navbar-expand-lg py-3 px-5  container">
+                <a class="navbar-brand fw-bold fs-5 " href="#">Taha, Muhammad </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fs-3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Professional_Works.html">Professional Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Academic_info.html">ACADEMIC INFO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style=" border-bottom: 2px solid #212121 !important;">HERITAGES AND HORIZONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- nav bar ends--------- -->
+
+        <section class="heritage-horizon">
+            <div class="section-header">
+              <h2>Heritage and Horizon</h2>
+              <p>Celebrating timeless wonders of the past and visionary marvels of the present.</p>
+            </div>
+
+          <!-- video section starts here---------------------->
+
+          
+        <section class="container play ">
+            <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 40px; mb-5">
+            </h1>
+            <div class="video">
+                <video src="img/Heritage & Horizon .mp4" poster="" class="w-100" style="border-radius: 30px;" controls></video>
+            </div>
+        </section>
+        <!-- video section ends here---------------------->
+
+<!-- PICTURES SECTION -->
+
+       <!-- <section class="gallery container">
+                <div class="grid">
+                    <div class="grid-item">
+                        <img src="img/Portfolio-1.jpg" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/apple-touch-icon.png" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/counters-bg.jpg" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/lumion-96.png" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/Portfolio-5.jpg" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/alex-vidal.png" alt="Gallery item">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/sketchup.png" alt="Gallery item">
+                    </div>
+                </div>
+        </section> -->
+        <!-- masonry gallery ends  -->
+        <!-- -----------------footer------------------ -->
+        <section id="footer" class="container">
+            <div class="footer_row">
+                <div class="footer_left">
+                    <h1>Opening Hours</h1>
+                    <p>Monday to Friday - 9am to 5pm</p>
+                    <p></p>
+                    <p>Friday and Saturday Off</p>
+                </div>
+                <div class="footer_right">
+                    <h1>Get In Touch</h1>
+                    
+                    <p>ar.tahakhan@gmail.com</p>
+                    <p>+971504614775</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100077493254077&mibextid=wwXIfr&mibextid=wwXIfr " target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/taha_khan0763?igsh=MWtkM3F2bDdmZTZwaQ%3D%3D&utm_source=qr " target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <!-- <i class="fa-brands  fa-youtube"></i> -->
+                <a href="http://linkedin.com/in/muhammad-taha0763" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                
+                <p></p>
+            </div>
+        </section>
+    </section>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Masonry
+        const grid = document.querySelector('.grid');
+        const msnry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 15
+        });
+
+        // Layout Masonry after each image loads
+        const images = grid.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('load', () => {
+                msnry.layout();
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            msnry.layout();
+        });
+    });
+</script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+</html>

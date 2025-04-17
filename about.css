@@ -1,0 +1,323 @@
+z* {
+    padding: none !important;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none !important;
+}
+body{
+    background-color: #f8f9fa;
+}
+:root {
+    --primary-color: #2a5f7f;
+    --secondary-color: #f0f5f9;
+    --accent-color: #008080;
+    --text-color: #333;
+    --light-text: #666;
+  }
+  
+/* general css ends for whole document */
+.divv {
+    margin-bottom: 100px !important;
+    position: sticky;top: 0 !important;
+    backdrop-filter: blur(45px);
+    z-index: 1000 !important;
+}
+nav li {
+    margin-left: 15px !important;
+}
+
+nav li a {
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 600 !important;
+    color: #363434 !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: .5s !important;
+    border-bottom: 2px solid #21212102 !important;
+    font-size: 17px !important;
+}
+
+nav li a:hover {
+    border-bottom: 2px solid #212121 !important;
+}
+.active{
+ 
+}
+/* nav section ends---------------- */
+.education-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+  }
+  
+  .education-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80') center/cover;
+    opacity: 0.1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .education-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .education-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: white;
+  }
+  
+  .education-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .university-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .university-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .campus-name {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  .degree-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .degree-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .degree-label {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  .degree-value {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .gpa-value {
+    font-size: 28px;
+    color: #FFD700;
+    font-weight: 700;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 15px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .education-title {
+      font-size: 28px;
+    }
+    
+    .university-name {
+      font-size: 20px;
+    }
+    
+    .campus-name {
+      font-size: 16px;
+    }
+    
+    .degree-info {
+      padding: 20px;
+    }
+  }
+  /* header section ends------------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left .sub-title{
+    color: var(--primary-color);
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social_icons{
+    margin-top: 30px;
+}
+.social_icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    transition: .5s;
+    display: inline-block;
+}
+.social_icons a:hover{
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+.btn.btn_2{
+    display: inline-block;
+    background-color: var(--primary-color);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: #efefef;
+    padding: 15px;
+    margin: 15px 0 ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn_2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+@media screen and (max-width:768px) {
+    .sub-title{
+        font-size: 40px;
+    }
+    .col_1,.col_2{
+        flex-basis: 100%;
+    }
+    .col_1{
+        margin-bottom: 30px;
+    }
+    .col_2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+    
+}
+/* contact section ends here------------------- */
+
+/* footer section */
+#footer{
+    margin-top: 100px;
+      padding: 20px;
+      background: #efefef;
+  }
+  .footer_row{
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  .footer_left,.footer_right{
+      flex-basis:45% ;
+      padding: 10px;
+  }
+  .footer_right{
+      text-align: right;
+  } 
+  .footer_row h1{
+      margin: 20px 0;
+  
+  }
+  .footer_row p{
+      line-height: 15px;
+  }
+  .social-links{
+      text-align: center;
+  }
+  .fa-brands{
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      border: 1px solid #009688;
+      margin: 0px 5px 0;
+      color: #009688;
+      cursor: pointer;
+      transition: .5s;
+  }
+  .social-links .fa-brands:hover{
+      background-color: #009688;
+      color: #fff;
+      transform: translateY(-7px);
+  }
+  .social-links p{
+      font-size: 12px;
+      margin-top: 5px;
+  }
+  @media screen and (max-width:770px) {
+      .footer_left,.footer_right{
+          flex-basis: 100%;
+          font-size: 14px;
+      }
+      
+    }  
