@@ -159,17 +159,7 @@ nav li a:hover {
     background: rgba(255, 255, 255, 0.2);
     margin: 15px 0;
   }
-  .carousel-inner {
-    height: 400px; /* Fixed height for carousel */
-    overflow: hidden;
-  }
-  
-  .carousel-inner img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
+
   @media (max-width: 768px) {
     .education-title {
       font-size: 28px;
@@ -187,69 +177,95 @@ nav li a:hover {
       padding: 20px;
     }
   }
-
-  /* CARDS MODIFIED SECTION */
    
   /* header section ends------------------- */
-  .designs-displayed{
-    margin-bottom: 100px !important;
- }
   .gallery-container {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
     margin: 0 auto;
-    padding: 0 15px;
-  }
-  .design-card {
-    width: 95vw;
-  
+}
+
+.design-card {
+    width: 100%;
+    max-width: 900px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
-    margin: auto; /* 👈 centers the card horizontally */
-  }
-  
-  
-  .design-card:hover {
+}
+
+.design-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .image-section {
-    width: 400px;
-    height: 400px;
-    flex-shrink: 0;
-    overflow: hidden;
-    position: relative;
-  }
-  .thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s;
-  }
-  
-  .image-section:hover .thumbnail {
-    opacity: 0.9;
-  }
-  .carousel-inner {
-    height: 100%;
-    width: 50%;
-  }
+}
 
-  .carousel-inner img {
+.image-section {
+    width: 33.33%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.thumbnail {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .zoom-icon {
+    cursor: zoom-in;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-dot.active {
+    background: white;
+}
+
+.zoom-icon {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -261,56 +277,52 @@ nav li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .image-section:hover .zoom-icon {
-    opacity: 1;
-  }
-  
-  .content-section {
-    flex: 1;
+    z-index: 5;
+    cursor: zoom-in;
+}
+
+.content-section {
+    width: 66.66%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
-  }
-  .card-title {
+}
+
+.card-title {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .card-description {
+}
+
+.card-description {
     color: var(--light-text);
     font-size: 15px;
     line-height: 1.6;
     text-align: center;
     margin-bottom: 25px;
-  }
-  
-  .tags {
+}
+
+.tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
-  }
-  
-  .tag {
+}
+
+.tag {
     background: var(--secondary-color);
     color: var(--primary-color);
     padding: 6px 14px;
     border-radius: 15px;
     font-size: 12px;
     font-weight: 500;
-  }
-  
-  /* Modal for magnified image */
-  .modal {
+}
+
+/* Modal for magnified image */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -321,45 +333,44 @@ nav li a:hover {
     z-index: 1000;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     max-width: 90%;
     max-height: 90%;
-  }
-  
-  .modal-img {
+    position: relative;
+}
+
+.modal-img {
     width: 100%;
     height: auto;
     max-height: 80vh;
     object-fit: contain;
-  }
-  
-  .close-modal {
+}
+
+.close-modal {
     position: absolute;
     top: 20px;
     right: 30px;
     color: white;
     font-size: 30px;
     cursor: pointer;
-  }
-  
+}
 
-  
-/*  Mobile responsive layout */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .design-card {
-    flex-direction: column;
-  }
+    .design-card {
+        flex-direction: column;
+    }
 
-  .image-section,
-  .content-section {
-    width: 100%;
-  }
+    .image-section,
+    .content-section {
+        width: 100%;
+    }
 
-  .image-section {
-    height: 250px;
-  }
+    .image-section {
+        height: 250px;
+    }
 }
 /* footer section */
 #footer{
