@@ -197,6 +197,21 @@ nav li a:hover {
     margin-right: 15px;
     font-size: 25px;
 }
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: #efefef;
+    padding: 15px;
+    margin: 15px 0 ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
 .social_icons{
     margin-top: 30px;
 }
@@ -212,24 +227,6 @@ nav li a:hover {
 .social_icons a:hover{
     color: var(--primary-color);
     transform: translateY(-5px);
-}
-.btn.btn_2{
-    display: inline-block;
-    background-color: var(--primary-color);
-}
-.contact-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 100%;
-    outline: none;
-    border: 0;
-    background: #efefef;
-    padding: 15px;
-    margin: 15px 0 ;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
 }
 .btn_2{
     padding: 14px 60px;
