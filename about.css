@@ -42,9 +42,9 @@ nav li a {
 nav li a:hover {
     border-bottom: 2px solid #212121 !important;
 }
-.active{
+
  
-}
+
 /* nav section ends---------------- */
 .education-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
@@ -202,8 +202,9 @@ nav li a:hover {
 }
 .social_icons a{
     text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
+    font-size: 40px;
+    margin: 10px 10px;
+    padding: 10px;
     color: #ababab;
     transition: .5s;
     display: inline-block;
